@@ -1,0 +1,8 @@
+D:/Unity/DoAnChuyenNghanh/DoAnChuyenNghanh/.utmp/RelWithDebInfo/6f1r1fy3/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/Unity/DoAnChuyenNghanh/DoAnChuyenNghanh/.utmp/RelWithDebInfo/6f1r1fy3/arm64-v8a/CMakeFiles/rebuild_cache.dir
+D:/Unity/DoAnChuyenNghanh/DoAnChuyenNghanh/.utmp/RelWithDebInfo/6f1r1fy3/arm64-v8a/GameActivity/CMakeFiles/game.dir
+D:/Unity/DoAnChuyenNghanh/DoAnChuyenNghanh/.utmp/RelWithDebInfo/6f1r1fy3/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+D:/Unity/DoAnChuyenNghanh/DoAnChuyenNghanh/.utmp/RelWithDebInfo/6f1r1fy3/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
+D:/Unity/DoAnChuyenNghanh/DoAnChuyenNghanh/.utmp/RelWithDebInfo/6f1r1fy3/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+D:/Unity/DoAnChuyenNghanh/DoAnChuyenNghanh/.utmp/RelWithDebInfo/6f1r1fy3/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+D:/Unity/DoAnChuyenNghanh/DoAnChuyenNghanh/.utmp/RelWithDebInfo/6f1r1fy3/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir
