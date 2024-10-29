@@ -17,5 +17,5 @@ MonoBehaviour:
   sprite: {fileID: 778608710654788459, guid: 72dc992e713e3aa41860fef5b8600db5, type: 3}
   hp: 20
   attack: 7
-  speed: 4
+  speed: 2
   attackSpeed: 1

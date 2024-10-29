@@ -58,4 +58,9 @@ public class HeroBase : ScriptableObject
     {
         get { return bulletSpeed; }
     }
+
+    public GameObject Bullet
+    {
+        get { return bullet; }
+    }
 }

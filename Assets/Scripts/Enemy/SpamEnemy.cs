@@ -30,7 +30,7 @@ public class SpamEnemy : MonoBehaviour
         {
             if (spawnNext >= timeBatlle)
             {
-                for (int i = 0; i < spawnPoints.Count; i++)
+                for (int i = 0; i < spawnPoints.Count -1; i++)
                 {
                     var temporary = Instantiate(enemyUnit, spawnPoints[i].transform);
                     EnemyUnit enemyUnitCurrent = temporary.GetComponent<EnemyUnit>();
@@ -38,7 +38,7 @@ public class SpamEnemy : MonoBehaviour
                     enemyUnitCurrent.AttackSpeed = enemyBases[tt].AttackSpeed;
                     enemyUnitCurrent.EnemyAttack = enemyBases[tt].AttackCurrent(levelBattle);
                     enemyUnitCurrent.EnemySpeed = enemyBases[tt].Speed;
-                    enemyUnitCurrent.EnemyHp = enemyBases[tt].HpCurrent(levelBattle);
+                    enemyUnitCurrent.EnemyMaxHp = enemyBases[tt].HpCurrent(levelBattle);
                     spriteRenderer.sprite = enemyBases[tt].Sprite;
                 }
                 tt++;

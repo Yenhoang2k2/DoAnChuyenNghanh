@@ -10,7 +10,7 @@ enum State
 }
 public class BattleSystem : MonoBehaviour
 {
-    [SerializeField] private HeroUnit heroUnit;
+    [SerializeField] private List<HeroUnit> heroUnits;
     [SerializeField] private SpamEnemy spamEnemy;
     private State state;
 
@@ -24,7 +24,10 @@ public class BattleSystem : MonoBehaviour
     {
         if (state == State.Battle)
         {
-            heroUnit.UpdateUnit();
+            for (int i = 0; i < heroUnits.Count; i++)
+            {
+                heroUnits[i].UpdateUnit();
+            }
             if(spamEnemy.timeBatlle >= 0)
                 spamEnemy.SpawnEnemy();
         }

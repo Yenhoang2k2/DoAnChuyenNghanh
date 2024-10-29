@@ -44,13 +44,12 @@ public class EnemyBase : ScriptableObject
         get { return attackSpeed; }
     }
     
-    
-    public float HpCurrent(int level)
-    {
-        return Attack * (level*0.1f);
-    }
     public float AttackCurrent(int level)
     {
-         return Hp * (level * 0.2f);
+        return Attack + (level*0.1f);
+    }
+    public float HpCurrent(int level)
+    {
+         return Hp + (level * 1f);
     }
 }

@@ -1,43 +1,57 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 public class EnemyUnit : MonoBehaviour
 {
-    [SerializeField] private GameObject tower;
+    [SerializeField] private HpBar hpBar;
     private Vector3 towerPos;
-    
+    bool isMoving = true;
+    private float hpCurrent;
+
     public float EnemyAttack { get; set; }
     public float AttackSpeed { get; set; }
-    public float EnemyHp { get; set; }
+    public float EnemyMaxHp { get; set; }
     public float EnemySpeed { get; set; }
-    private void Awake()
+
+    private void Start()
     {
-        BulletTo();
+        hpCurrent = EnemyMaxHp;
+        hpBar.SetHp();
     }
 
     private void Update()
     {
-        BulletMove();
+        EnemyMove();
     }
 
-    public void BulletMove()
+    public void EnemyMove()
     {
-        if (Vector3.Distance(transform.position, towerPos) <= 0.5f)
+        if (isMoving)
+            transform.position = new Vector3(transform.position.x - EnemySpeed * Time.deltaTime, transform.position.y);
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Tower"))
         {
-            // Attack
-        }
-        else
-        {
-            //transform.position = new Vector3(transform.position.x-EnemySpeed*Time.deltaTime,transform.position.y);
+            isMoving = false;
         }
     }
-    public void BulletTo()
+
+    public void TakeDame(float dame)
     {
-        if (tower != null)
+        hpCurrent -= dame;
+        if (hpCurrent <= 0)
         {
-            towerPos = tower.transform.position;
+            hpCurrent = 0;
+            Destroy(gameObject);
+            return;
         }
+
+        hpBar.UpdateHp(hpCurrent / EnemyMaxHp);
     }
 }

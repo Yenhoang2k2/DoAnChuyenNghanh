@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a97bdfc7572d2e428db255de2480364, type: 3}
   m_Name: Warrior
   m_EditorClassIdentifier: 
-  bullet: {fileID: 5173386707887416144, guid: 745448613f16e894eafa25237c443900, type: 3}
+  bullet: {fileID: 5173386707887416144, guid: 21d0850fdb181ac4f9109bf383f10ba4, type: 3}
   name: Warrior
   desciption: 
   sprite: {fileID: -549789443665989942, guid: 72dc992e713e3aa41860fef5b8600db5, type: 3}
   price: 500
   attack: 3
   attackSpeed: 1
-  bulletSpeed: 6
+  bulletSpeed: 11
   coeffcent: 0.1
   priceUp: 50

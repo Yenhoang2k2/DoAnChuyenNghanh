@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Hero
 {
-    public Bullet Bullet { get; set; }
     public HeroBase HeroBase { get; set; }
     public int Level { get; set; }
 
@@ -21,5 +20,10 @@ public class Hero
     public float PriceCurre
     {
         get { return Level * HeroBase.PriceUp + HeroBase.Attack; }
+    }
+
+    public void UpLevel()
+    {
+        Level += 1;
     }
 }
