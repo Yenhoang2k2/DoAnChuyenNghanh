@@ -13,7 +13,7 @@ public class HeroUnit : MonoBehaviour
     [SerializeField] private GameObject poitShoot;
     [SerializeField] private GameObject bullet;
     private GameObject[] enemys;
-    public float timeWait;
+    float timeWait;
     public Hero Hero { get; set; }
     private void Start()
     {
@@ -46,7 +46,7 @@ public class HeroUnit : MonoBehaviour
         if (enemys.Length != 0)
         {
             var temporary = Instantiate(bullet, poitShoot.transform);
-            Bullet a = temporary.GetComponent<Bullet>();
+            var a = temporary.GetComponent<Bullet>();
             SpriteRenderer spriteRenderer = temporary.GetComponent<SpriteRenderer>();
             var bu = Hero.HeroBase.Bullet;
             spriteRenderer.sprite = bu.GetComponent<SpriteRenderer>().sprite;

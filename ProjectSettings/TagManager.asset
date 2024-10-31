@@ -10,10 +10,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Enemy
+  - Tower
   - Water
   - UI
-  - Tower
+  - Enemy
   - 
   - 
   - 
@@ -42,4 +42,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: tower
+    uniqueID: 1179203379
+    locked: 0
+  - name: button
+    uniqueID: 285627669
     locked: 0

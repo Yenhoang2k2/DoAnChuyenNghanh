@@ -11,24 +11,30 @@ public class SpamEnemy : MonoBehaviour
     [SerializeField] private List<EnemyBase> enemyBases;
     [SerializeField] private List<GameObject> spawnPoints;
     [SerializeField] private int timeSpawn;
-    public float timeBatlle;
+    [SerializeField] private float timeBatlle;
+    public float timeBatllCurent;
     public float spawnNext;
-    public int tt;
+    private int tt;
 
     public int levelBattle;
+    public float TimeBatlle
+    {
+        get { return timeBatlle +(levelBattle*0.2f); }
+    }
     
     public void SetUpPointSpawn()
     {
-        timeBatlle +=levelBattle*0.1f;
-        spawnNext = timeBatlle;
+        tt = 0;
+        timeBatllCurent = TimeBatlle;
+        spawnNext = TimeBatlle;
     }
     
     public void SpawnEnemy()
     {
-        timeBatlle -= Time.deltaTime*1;
-        if (timeBatlle > 0)
+        timeBatllCurent -= Time.deltaTime*1;
+        if (timeBatllCurent > 0)
         {
-            if (spawnNext >= timeBatlle)
+            if (spawnNext >= timeBatllCurent)
             {
                 for (int i = 0; i < spawnPoints.Count -1; i++)
                 {
@@ -43,10 +49,9 @@ public class SpamEnemy : MonoBehaviour
                 }
                 tt++;
                 if (tt >= enemyBases.Count)
-                    tt = 1;
+                    tt = 0;
                 spawnNext -= timeSpawn;
             }
         }
     }
-    
 }
